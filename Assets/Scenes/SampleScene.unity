@@ -131,11 +131,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 233783306}
-  - component: {fileID: 233783308}
-  - component: {fileID: 233783307}
-  m_Layer: 5
-  m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,7 +824,7 @@ GameObject:
   - component: {fileID: 1807680856}
   - component: {fileID: 1807680861}
   - component: {fileID: 1807680855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -848,9 +843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61b1f6ef2050f44bad0e0c6f229be74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  sr: {fileID: 0}
-  a: {fileID: 0}
+  rb: {fileID: 1807680857}
+  sr: {fileID: 1807680859}
+  a: {fileID: 1807680858}
   speed: 5
   hit: {fileID: 0}
   hpText: {fileID: 233783307}
