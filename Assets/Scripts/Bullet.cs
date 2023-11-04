@@ -8,8 +8,8 @@ public class Bullet : MonoBehaviour
     {
         //if (other.tag == "Enemy")
             //other.gameObject.GetComponent<Enemy>().Damage();
-        //else if (other.tag == "Player)
-            //other.gameObject.GetComponent<PlayerController>().Damage;
+        if (other.tag == "Player")
+            other.gameObject.GetComponent<PlayerController>().Damage();
         Destroy(gameObject);
     }
 }
