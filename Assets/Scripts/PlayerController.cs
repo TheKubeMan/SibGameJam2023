@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Callbacks;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,11 +11,20 @@ public class PlayerController : MonoBehaviour
 	public SpriteRenderer sr;
 	public Animator a;
 	public float speed;
+    int maxHP;
+    int hp;
+    AudioSource AS;
+    public AudioClip hit;
+    public Text hpText;
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 		sr = this.gameObject.GetComponent<SpriteRenderer>();
 		a = this.gameObject.GetComponent<Animator>();
+        AS = gameObject.GetComponent<AudioSource>();
+        maxHP = PlayerPrefs.GetInt("maxHP", 3);
+        hp = maxHP;
+        hpText.text = "HP: " + hp.ToString();
     }
 
     void Update()
@@ -33,5 +43,17 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = move * speed;
+    }
+    public void Damage()
+    {
+        hp--;
+        hpText.text = "HP: " + hp.ToString();
+        AS.PlayOneShot(hit);
+    }
+    public void Restore()
+    {
+        if (hp < maxHP)
+            hp++;
+        hpText.text = "HP: " + hp.ToString();
     }
 }
