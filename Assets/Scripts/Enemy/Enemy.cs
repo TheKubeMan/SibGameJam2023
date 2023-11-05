@@ -17,22 +17,9 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private Transform shotPoint;
-    [SerializeField] private float startTearsUp; //Начальная скорострельность
-    [SerializeField] private float distance;
-    [SerializeField] private float tearsUp; //Скорострельность
-    [SerializeField] private bool facingRight = true;
     private Animator anim;
 
-    [SerializeField] private GameObject rotate;
-    [SerializeField] private float offset;
-    private Vector2 position;
-
-    [SerializeField] private GameObject gun;
-
-    public GunType gunType;
-    public enum GunType {Default, Enemy}
+    public int hp;
 
     // Start is called before the first frame update
     void Start()
@@ -46,9 +33,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         isPlayer = Physics2D.OverlapCircle(radiusAttackPos.position, checkRadiusPlayer, whatIsPlayer);
-
-        Vector3 difference = player.transform.position - transform.position;
-        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
     }
 
     private void OnDrawGizmos()
@@ -61,16 +45,7 @@ public class Enemy : MonoBehaviour
         if (isPlayer)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, Speed * Time.deltaTime);
-            if (tearsUp <= 0)
-            {
-                Instantiate(bullet, shotPoint.position, rotate.transform.rotation);
-                tearsUp = startTearsUp;
-            }
-            else
-            {
-                tearsUp -= Time.deltaTime;
-            }
-
+            
         }
 
         if (player.transform.position.x > transform.position.x)
@@ -83,11 +58,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Flip()
+    public void Damage()
     {
-        facingRight = !facingRight;
-        Vector3 Scale = transform.localScale;
-        Scale.x *= -1;
-        transform.localScale = Scale;
+        hp--;
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

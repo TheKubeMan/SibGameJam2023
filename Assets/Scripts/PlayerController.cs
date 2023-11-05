@@ -39,14 +39,19 @@ public class PlayerController : MonoBehaviour
 			a.SetFloat("LastH", rb.velocity.x);
 			a.SetFloat("LastV", rb.velocity.y);
 		}
+
+        if(hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     void FixedUpdate()
     {
         rb.velocity = move * speed;
     }
-    public void Damage()
+    public void Damage(int damage)
     {
-        hp--;
+        hp -= damage;
         hpText.text = "HP: " + hp.ToString();
         AS.PlayOneShot(hit);
     }

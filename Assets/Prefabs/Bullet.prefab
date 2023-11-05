@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8858069334968268872}
   - component: {fileID: 5597873633755476494}
-  - component: {fileID: 3934331545120338194}
+  - component: {fileID: -5859940192890548844}
+  - component: {fileID: 4923663414220645341}
+  - component: {fileID: 1371768509527348146}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -83,7 +85,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3934331545120338194
+--- !u!58 &-5859940192890548844
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562964311022140695}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0051308377, y: 0.009438716}
+  serializedVersion: 2
+  m_Radius: 0.42817074
+--- !u!50 &4923663414220645341
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562964311022140695}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1371768509527348146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,14 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 562964311022140695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b841e46d2c4a68e41a28671e1d49b96f, type: 3}
+  m_Script: {fileID: 11500000, guid: 51798594f3042d746ba3993178c0d14f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  lifetime: 2
-  distance: 5
   damage: 1
-  solid:
-    serializedVersion: 2
-    m_Bits: 192
-  Direction: {x: 1, y: 0}
