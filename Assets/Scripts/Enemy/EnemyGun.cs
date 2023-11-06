@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyGun : MonoBehaviour
 {
-
     public GameObject bullet;
     public Transform ShootPoint;
     public float speed;
+    public float speedM = 1;
+
+    public int bulletCount = 1;
 
     public float offset;
 
@@ -42,7 +44,7 @@ public class EnemyGun : MonoBehaviour
             if (timeBtwShots <= 0)
             {
                 GameObject b = Instantiate(bullet, ShootPoint.position, transform.rotation);
-                b.GetComponent<Rigidbody2D>().AddForce(transform.right * speed, ForceMode2D.Force);
+                b.GetComponent<Rigidbody2D>().AddForce(transform.right * speed * speedM, ForceMode2D.Force);
                 timeBtwShots = startTimeBtwShots;
             }
             else
