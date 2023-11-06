@@ -162,6 +162,7 @@ MonoBehaviour:
   speedM: 1
   hit: {fileID: 0}
   hpText: {fileID: 0}
+  deathEffect: {fileID: 4038319552431631435, guid: aeb2f035ac3352a4d8e881919842029c, type: 3}
 --- !u!1 &1974649865423661055
 GameObject:
   m_ObjectHideFlags: 0

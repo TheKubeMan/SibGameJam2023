@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip hit;
     public Text hpText;
     bool facingRight = true;
+    public GameObject deathEffect;
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
         if(hp <= 0)
         {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
