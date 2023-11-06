@@ -13,6 +13,8 @@ public class PlayerGun : MonoBehaviour
     void Start()
     {
         player = transform.parent.gameObject;
+        speedM = PlayerPrefs.GetFloat("BulletSpeed", 1);
+        bulletCount = PlayerPrefs.GetInt("BulletCount", 1);
     }
 
     void Update()
