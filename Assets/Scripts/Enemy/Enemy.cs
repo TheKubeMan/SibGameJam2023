@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
+using Unity.Mathematics;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -20,6 +22,8 @@ public class Enemy : MonoBehaviour
 
     private Animator anim;
 
+    public GameObject deathEffect;
+
     public int hp;
 
     public GameObject d1, d2, d3, d4, d5, d6;
@@ -33,7 +37,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
 
-        int randomNumber2 = Random.Range(1, 101);
+        int randomNumber2 = UnityEngine.Random.Range(1, 101);
         if (randomNumber2 >= 1 && randomNumber2 < 31)
         {
             type = 1;
@@ -61,6 +65,14 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         isPlayer = Physics2D.OverlapCircle(radiusAttackPos.position, checkRadiusPlayer, whatIsPlayer);
+        if (isPlayer)
+        {
+            anim.SetBool("walk", true);
+        }
+        else
+        {
+            anim.SetBool("walk", false);
+        }
     }
 
     private void OnDrawGizmos()
@@ -73,6 +85,7 @@ public class Enemy : MonoBehaviour
         if (isPlayer)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, Speed * speedM * Time.deltaTime);
+
             
         }
 
@@ -92,6 +105,7 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             EnemyDrop();
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
@@ -103,10 +117,10 @@ public class Enemy : MonoBehaviour
 
     public void EnemyDrop()
     {
-        int randomNumber = Random.Range(1, 4);
+        int randomNumber = UnityEngine.Random.Range(1, 4);
         if(randomNumber == 1)
         {
-            int randomNumber2 = Random.Range(1, 101);
+            int randomNumber2 = UnityEngine.Random.Range(1, 101);
             if (randomNumber2 >= 1 && randomNumber2 < 31)
             {
                 Instantiate(d1, transform.position, Quaternion.Euler(0, 0, 0));
@@ -130,7 +144,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            int randomNumber3 = Random.Range(1, 11);
+            int randomNumber3 = UnityEngine.Random.Range(1, 11);
             if(randomNumber3 == 1)
             {
                 Instantiate(d6, transform.position, Quaternion.Euler(0, 0, 0));
