@@ -78,13 +78,11 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Boss.cs" />
-    <Compile Include="Assets\Scripts\Enemy\bossGun.cs" />
-    <Compile Include="Assets\Scripts\Menu\startgame.cs" />
-    <Compile Include="Assets\Scripts\Cutscenes\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\Cutscenes\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Pickups\Pickups.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Menu\startgame.cs" />
+    <Compile Include="Assets\Scripts\Portal.cs" />
+    <Compile Include="Assets\Scripts\Counter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

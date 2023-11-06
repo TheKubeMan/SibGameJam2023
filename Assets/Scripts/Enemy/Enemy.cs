@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     public GameObject deathEffect;
 
     public int hp;
+    public GameObject canvas;
 
     public GameObject d1, d2, d3, d4, d5, d6;
     GameObject drop;
@@ -106,6 +107,7 @@ public class Enemy : MonoBehaviour
         {
             EnemyDrop();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
+            canvas.GetComponent<Counter>().left--;
             Destroy(gameObject);
         }
     }

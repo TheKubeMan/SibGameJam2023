@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: df03f754436e4c44488e19fb9bbcf036, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -326,7 +326,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 3333519553364820122, guid: 4ae122848c14a3d47a7d6d0bea90ea0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -407,6 +407,7 @@ MonoBehaviour:
     m_Bits: 64
   deathEffect: {fileID: 4038319552431631435, guid: be044760c02e77c44a099f82ef29450b, type: 3}
   hp: 3
+  canvas: {fileID: 0}
   d1: {fileID: 8213166118621284833, guid: aea597dc9c8bc8b489e6e8e08b846965, type: 3}
   d2: {fileID: 8213166118621284833, guid: c8e4d984367a94f449775b4bd7386873, type: 3}
   d3: {fileID: 8213166118621284833, guid: 679ea8358967078488ce5d0e74eeef67, type: 3}
