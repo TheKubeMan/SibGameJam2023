@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 4ae122848c14a3d47a7d6d0bea90ea0f
+guid: bfb04e0f5120950438d68bf1bd2c3b96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3333519553364820122
-    second: EnemyWalk_0
+      213: -9095196822728518287
+    second: -Sheet_0
   - first:
-      213: 5397656243092601031
-    second: EnemyWalk_1
+      213: 2270236354037247264
+    second: -Sheet_1
   - first:
-      213: -2061383542819475063
-    second: EnemyWalk_2
+      213: 7751722143754526998
+    second: -Sheet_2
   - first:
-      213: -886456225449863607
-    second: EnemyWalk_3
+      213: -243147324809725674
+    second: -Sheet_3
   - first:
-      213: -8942450185556836452
-    second: EnemyWalk_4
+      213: -4882477217233123295
+    second: -Sheet_4
   - first:
-      213: 7887131161206726974
-    second: EnemyWalk_5
+      213: 31893863579762109
+    second: -Sheet_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -65,7 +65,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 49, y: 3, z: 183, w: 2}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemyWalk_0
+      name: -Sheet_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 3
         y: 3
-        width: 34
-        height: 31
+        width: 39
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a90012e3f5a034e20800000000000000
-      internalID: 3333519553364820122
+      spriteID: 175510b9dae57c180800000000000000
+      internalID: -9095196822728518287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyWalk_1
+      name: -Sheet_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 48
         y: 3
-        width: 34
-        height: 31
+        width: 39
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c8343d41c358ea40800000000000000
-      internalID: 5397656243092601031
+      spriteID: 02d619e8fef718f10800000000000000
+      internalID: 2270236354037247264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyWalk_2
+      name: -Sheet_2
       rect:
         serializedVersion: 2
-        x: 82
+        x: 93
         y: 3
-        width: 34
-        height: 31
+        width: 39
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 981b868e69e7463e0800000000000000
-      internalID: -2061383542819475063
+      spriteID: 611a4082836a39b60800000000000000
+      internalID: 7751722143754526998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyWalk_3
+      name: -Sheet_3
       rect:
         serializedVersion: 2
-        x: 122
+        x: 138
         y: 3
-        width: 34
-        height: 31
+        width: 39
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 946902572cca2b3f0800000000000000
-      internalID: -886456225449863607
+      spriteID: 61931acdbca20acf0800000000000000
+      internalID: -243147324809725674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyWalk_4
+      name: -Sheet_4
       rect:
         serializedVersion: 2
-        x: 162
+        x: 183
         y: 3
-        width: 34
-        height: 31
+        width: 39
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9f32447fe806e380800000000000000
-      internalID: -8942450185556836452
+      spriteID: 128c1e2e6d4fd3cb0800000000000000
+      internalID: -4882477217233123295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyWalk_5
+      name: -Sheet_5
       rect:
         serializedVersion: 2
-        x: 202
+        x: 228
         y: 3
-        width: 34
-        height: 31
+        width: 39
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,8 +241,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3124a8d008b47d60800000000000000
-      internalID: 7887131161206726974
+      spriteID: dbdbf29cc4f417000800000000000000
+      internalID: 31893863579762109
       vertices: []
       indices: 
       edges: []
