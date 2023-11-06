@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
         maxHP = PlayerPrefs.GetInt("maxHP", 3);
         hp = maxHP;
         hpText.text = "HP: " + hp.ToString();
+        speedM = PlayerPrefs.GetFloat("Speed", 1);
     }
 
     void Update()
@@ -65,7 +66,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Restore()
     {
-        maxHP++;
+        if (maxHP < 10)
+            maxHP++;
         hp++;
         PlayerPrefs.SetInt("maxHP", maxHP);
         hpText.text = "HP: " + hp.ToString();
