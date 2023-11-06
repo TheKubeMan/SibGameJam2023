@@ -75,8 +75,8 @@
     <Compile Include="Assets\Scripts\Enemy\Boss.cs" />
     <Compile Include="Assets\Scripts\Enemy\bossGun.cs" />
     <Compile Include="Assets\Scripts\Menu\startgame.cs" />
-    <Compile Include="Assets\Scripts\Cutscenes\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\DialogueManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
