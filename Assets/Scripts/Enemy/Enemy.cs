@@ -54,8 +54,7 @@ public class Enemy : MonoBehaviour
         {
             type = 5;
         }
-
-        gameObject.GetComponent<EnemyBuffs>().type = type;
+        gameObject.GetComponent<EnemyBuffs>().GenerateBuff(type);
     }
 
     // Update is called once per frame
@@ -95,6 +94,11 @@ public class Enemy : MonoBehaviour
             EnemyDrop();
             Destroy(gameObject);
         }
+    }
+
+    public void ChangeHP(int newHP)
+    {
+        hp = newHP;
     }
 
     public void EnemyDrop()

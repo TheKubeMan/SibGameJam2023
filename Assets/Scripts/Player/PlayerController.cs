@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     AudioSource AS;
     public AudioClip hit;
     public Text hpText;
+    bool facingRight = true;
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
@@ -49,6 +50,12 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = move * speed * speedM;
+        if (move.x > 0 && !facingRight) {
+				Flip ();
+			}
+			else if (move.x < 0 && facingRight) {
+				Flip ();
+			}
     }
     public void Damage()
     {
@@ -63,4 +70,12 @@ public class PlayerController : MonoBehaviour
         PlayerPrefs.SetInt("maxHP", maxHP);
         hpText.text = "HP: " + hp.ToString();
     }
+
+    void Flip(){
+        if (transform.rotation.y == 0)
+		    transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+        else
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+		facingRight = !facingRight;
+	}
 }

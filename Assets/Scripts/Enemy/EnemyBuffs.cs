@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyBuffs : MonoBehaviour
 {
-    public int type, group;
+    public int group;
 
     // Start is called before the first frame update
     void Start()
@@ -14,18 +14,26 @@ public class EnemyBuffs : MonoBehaviour
         {
             case "Level1":
                 group = 1;
+                gameObject.GetComponent<Enemy>().ChangeHP(2);
                 break;
             case "Level2":
                 group = 2;
+                gameObject.GetComponent<Enemy>().ChangeHP(3);
                 break;
             case "Level3":
                 group = 3;
+                gameObject.GetComponent<Enemy>().ChangeHP(4);
                 break;
             default:
                 group = 1;
+                gameObject.GetComponent<Enemy>().ChangeHP(3);
                 break;
-        }
+        }       
+    }
 
+    // Update is called once per frame
+    public void GenerateBuff(int type)
+    {
         switch (group)
         {
             case 1:
@@ -97,11 +105,5 @@ public class EnemyBuffs : MonoBehaviour
                 }
                 break;
             }
-        }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

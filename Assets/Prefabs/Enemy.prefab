@@ -269,11 +269,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   hp: 3
-  d1: {fileID: 1348056126354371882, guid: c71f900b48d8d90418ced1f33781688c, type: 3}
-  d2: {fileID: 1348056126354371882, guid: c71f900b48d8d90418ced1f33781688c, type: 3}
-  d3: {fileID: 1348056126354371882, guid: c71f900b48d8d90418ced1f33781688c, type: 3}
-  d4: {fileID: 1348056126354371882, guid: c71f900b48d8d90418ced1f33781688c, type: 3}
-  d5: {fileID: 1348056126354371882, guid: c71f900b48d8d90418ced1f33781688c, type: 3}
+  d1: {fileID: 8213166118621284833, guid: aea597dc9c8bc8b489e6e8e08b846965, type: 3}
+  d2: {fileID: 8213166118621284833, guid: c8e4d984367a94f449775b4bd7386873, type: 3}
+  d3: {fileID: 8213166118621284833, guid: 679ea8358967078488ce5d0e74eeef67, type: 3}
+  d4: {fileID: 8213166118621284833, guid: 02382fca89d89d2468c4bb41ca2edd9c, type: 3}
+  d5: {fileID: 8213166118621284833, guid: 3075ff58628d43f4089f4ca21a152bba, type: 3}
   d6: {fileID: 1348056126354371882, guid: c71f900b48d8d90418ced1f33781688c, type: 3}
   type: 1
 --- !u!114 &-5440492412863418313
@@ -288,7 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0ac68a12de09b499eeed44d5cf08ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   group: 0
 --- !u!1 &5969212024839933272
 GameObject:
