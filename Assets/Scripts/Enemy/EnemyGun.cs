@@ -22,10 +22,13 @@ public class EnemyGun : MonoBehaviour
 
     private float timeBtwShots;
     public float startTimeBtwShots;
+    AudioSource s;
+    public AudioClip atk;
 
     // Start is called before the first frame update
     void Start()
     {
+        s = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemy = transform.parent;
     }
@@ -76,6 +79,7 @@ public class EnemyGun : MonoBehaviour
 
     void Attack()
     {
+        s.PlayOneShot(atk);
         switch (bulletCount)
         {
             case 1:

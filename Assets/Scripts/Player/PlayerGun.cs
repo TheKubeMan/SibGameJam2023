@@ -9,9 +9,12 @@ public class PlayerGun : MonoBehaviour
     public float speed;
     public float speedM = 1;
     public int bulletCount = 1;
+    AudioSource source;
+    public AudioClip clip;
 
     void Start()
     {
+        source = gameObject.GetComponent<AudioSource>();
         player = transform.parent.gameObject;
         speedM = PlayerPrefs.GetFloat("BulletSpeed", 1);
         bulletCount = PlayerPrefs.GetInt("BulletCount", 1);
@@ -40,6 +43,7 @@ public class PlayerGun : MonoBehaviour
     }
     void Attack()
     {
+        source.PlayOneShot(clip);
         switch (bulletCount)
         {
             case 1:
