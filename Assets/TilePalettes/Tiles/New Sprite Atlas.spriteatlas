@@ -15,7 +15,7 @@ SpriteAtlas:
       compressionQuality: 50
       maxTextureSize: 2048
       textureCompression: 0
-      filterMode: 1
+      filterMode: 0
       generateMipMaps: 0
       readable: 0
       crunchedCompression: 0
@@ -32,6 +32,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
+    - {fileID: 102900000, guid: c50022d19018f11469a06993136c2d41, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}

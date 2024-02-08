@@ -40,6 +40,7 @@ public class Counter : MonoBehaviour
             case 0:
                 i.enabled = false;
                 buffT.text = "";
+                buffT2 = buffT;
                 break;
             case 1:
                 i.enabled = false;
