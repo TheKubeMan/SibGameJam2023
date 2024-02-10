@@ -19,6 +19,9 @@ public class PowerUp : MonoBehaviour
             case "Level3":
                 group = 3;
                 break;
+            case "Level4":
+                group = 3;
+                break;
             default:
                 group = 1;
                 break;
@@ -109,8 +112,8 @@ public class PowerUp : MonoBehaviour
                 }
             }
             PlayerPrefs.SetFloat("Speed", other.gameObject.GetComponent<PlayerController>().speedM);
-            PlayerPrefs.SetFloat("BulletSpeed", other.gameObject.GetComponent<PlayerController>().speedM);
-            PlayerPrefs.SetFloat("BulletCount", other.gameObject.GetComponentInChildren<PlayerGun>().bulletCount);
+            PlayerPrefs.SetFloat("BulletSpeed", other.gameObject.GetComponentInChildren<PlayerGun>().speedM);
+            PlayerPrefs.SetInt("BulletCount", other.gameObject.GetComponentInChildren<PlayerGun>().bulletCount);
             PlayerPrefs.SetInt("Buff", type);
             Destroy(gameObject);
         }

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 	public SpriteRenderer sr;
 	public Animator a;
 	public float speed;
-    public float speedM = 1;
+    public float speedM;
     int maxHP;
     int hp;
     AudioSource AS;

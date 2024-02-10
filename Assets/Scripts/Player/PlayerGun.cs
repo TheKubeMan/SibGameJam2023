@@ -7,8 +7,8 @@ public class PlayerGun : MonoBehaviour
     GameObject player;
     public GameObject gun1, gun2, gun3, gun4, gun5;
     public float speed;
-    public float speedM = 1;
-    public int bulletCount = 1;
+    public float speedM;
+    public int bulletCount;
     AudioSource source;
     public AudioClip clip;
 
