@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
 using Unity.Mathematics;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -29,11 +28,14 @@ public class Enemy : MonoBehaviour
 
     public GameObject d1, d2, d3, d4, d5, d6;
     GameObject drop;
+    AudioSource s;
+    public AudioClip hit;
     public int type;
 
     // Start is called before the first frame update
     void Start()
     {
+        s = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
@@ -102,6 +104,7 @@ public class Enemy : MonoBehaviour
 
     public void Damage()
     {
+        s.PlayOneShot(hit);
         hp--;
         if (hp <= 0)
         {
