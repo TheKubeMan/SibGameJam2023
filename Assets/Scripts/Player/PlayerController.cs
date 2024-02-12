@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public Text hpText;
     bool facingRight = true;
     public GameObject deathEffect;
+
+    public GameObject deathScreen;
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
@@ -48,6 +50,10 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            if (deathScreen.activeSelf == false)
+            {
+                deathScreen.SetActive(true);
+            }
         }
     }
     void FixedUpdate()

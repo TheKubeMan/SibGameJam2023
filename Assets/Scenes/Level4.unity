@@ -30454,6 +30454,10 @@ PrefabInstance:
       propertyPath: hpText
       value: 
       objectReference: {fileID: 1259794052}
+    - target: {fileID: 1974649865298409369, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 1790561638}
     - target: {fileID: 1974649865298409373, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -30597,6 +30601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
+--- !u!1 &1790561638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3939998172957480625, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
+  m_PrefabInstance: {fileID: 1790561637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1968419314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1974649865298409373, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}

@@ -107,8 +107,11 @@ public class Enemy : MonoBehaviour
         {
             EnemyDrop();
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            canvas.GetComponent<Counter>().left--;
             Destroy(gameObject);
+        }
+        if(hp == 0)
+        {
+            canvas.GetComponent<Counter>().left--;
         }
     }
 
