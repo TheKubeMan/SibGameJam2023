@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     int hp;
     AudioSource AS;
     public AudioClip hit;
-    public Text hpText;
+    public Text hpText, hpText2;
     bool facingRight = true;
     public GameObject deathEffect;
 
@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
         AS = gameObject.GetComponent<AudioSource>();
         maxHP = PlayerPrefs.GetInt("maxHP", 3);
         hp = maxHP;
-        hpText.text = "HP: " + hp.ToString();
+        hpText.text = ":" + hp.ToString();
+        hpText2.text = ":" + hp.ToString();
         speedM = PlayerPrefs.GetFloat("Speed", 1);
     }
 
@@ -68,7 +69,8 @@ public class PlayerController : MonoBehaviour
     public void Damage()
     {
         hp--;
-        hpText.text = "HP: " + hp.ToString();
+        hpText.text = ":" + hp.ToString();
+        hpText2.text = ":" + hp.ToString();
         AS.PlayOneShot(hit);
     }
     public void Restore()
@@ -77,7 +79,8 @@ public class PlayerController : MonoBehaviour
             maxHP++;
         hp++;
         PlayerPrefs.SetInt("maxHP", maxHP);
-        hpText.text = "HP: " + hp.ToString();
+        hpText.text = ":" + hp.ToString();
+        hpText2.text = ":" + hp.ToString();
     }
 
     void Flip(){

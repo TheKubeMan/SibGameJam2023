@@ -48423,6 +48423,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1188253962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2982503091935012111, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
+  m_PrefabInstance: {fileID: 2599298701138752163}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1289710481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2599298702411372850, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
@@ -48617,6 +48628,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 74482120}
     - target: {fileID: 1974649865298409369, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
+      propertyPath: hpText2
+      value: 
+      objectReference: {fileID: 1188253962}
+    - target: {fileID: 1974649865298409369, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 778437071}
@@ -48800,6 +48815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2599298701100113345, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2599298702411372850, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
       propertyPath: m_Name
       value: Canvas

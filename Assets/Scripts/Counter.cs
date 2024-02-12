@@ -15,6 +15,9 @@ public class Counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        i.enabled = false;
+        buffT.text = "";
+        buffT2.text = buffT.text;
         if (SceneManager.GetActiveScene().name == "Level4")
         {
             counter.enabled = false;
@@ -37,40 +40,35 @@ public class Counter : MonoBehaviour
         counter2.text = left.ToString() + "/15";
         switch (buff)
         {
-            case 0:
-                i.enabled = false;
-                buffT.text = "";
-                buffT2 = buffT;
-                break;
             case 1:
-                i.enabled = false;
+                i.enabled = true;
                 i.sprite = b1;
                 buffT.text = "скорость движения";
-                buffT2.text = buffT.text;
+                buffT2.text = "скорость движения";
                 break; 
             case 2:
-                i.enabled = false;
+                i.enabled = true;
                 i.sprite = b2;
                 buffT.text = "скорость полёта пули";
-                buffT2.text = buffT.text;
+                buffT2.text = "скорость полёта пули";
                 break;
             case 3:
-                i.enabled = false;
+                i.enabled = true;
                 i.sprite = b3;
                 buffT.text = "скорость движения \nскорость полёта пули";
-                buffT2.text = buffT.text;
+                buffT2.text = "скорость движения \nскорость полёта пули";
                 break;
             case 4:
-                i.enabled = false;
+                i.enabled = true;
                 i.sprite = b4;
                 buffT.text = "доп. пуля";
-                buffT2.text = buffT.text;
+                buffT2.text = "доп. пуля";
                 break;
             case 5:
-                i.enabled = false;
+                i.enabled = true;
                 i.sprite = b5;
                 buffT.text = "скорость движения \nдоп. пуля";
-                buffT2.text = buffT.text;
+                buffT2.text = "скорость движения \nдоп. пуля";
                 break;
         }
     }
