@@ -42796,6 +42796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+--- !u!1 &778437071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3939998172957480625, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
+  m_PrefabInstance: {fileID: 2599298701138752163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &781091042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48611,6 +48616,10 @@ PrefabInstance:
       propertyPath: hpText
       value: 
       objectReference: {fileID: 74482120}
+    - target: {fileID: 1974649865298409369, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 778437071}
     - target: {fileID: 1974649865298409373, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
       propertyPath: m_RootOrder
       value: 16
