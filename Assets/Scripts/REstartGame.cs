@@ -22,15 +22,18 @@ public class REstartGame : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("Level1");
+        Time.timeScale = 1f;
     }
 
     public void Menu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
     }
 
     public void Exit()
     {
         Application.Quit();
+        Time.timeScale = 1f;
     }
 }
