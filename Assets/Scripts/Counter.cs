@@ -16,6 +16,7 @@ public class Counter : MonoBehaviour
     void Start()
     {
         i.enabled = false;
+        buff = PlayerPrefs.GetInt("Buff", 0);
         buffT.text = "";
         buffT2.text = buffT.text;
         if (SceneManager.GetActiveScene().name == "Level4")
@@ -24,10 +25,7 @@ public class Counter : MonoBehaviour
             counter2.enabled = false;
         }
         else
-        {
-            left = 15;
-            buff = PlayerPrefs.GetInt("Buff", 0);
-        }
+            left = 15;   
     }
 
     // Update is called once per frame
