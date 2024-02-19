@@ -7,15 +7,11 @@ public class Boss : MonoBehaviour
     public float Speed;
     public float speedM = 1;
     private Transform player;
-
     public LayerMask whatIsPlayer;
-
+    public bool playerIsAlive = true;
     private Rigidbody2D rb;
-
     private Animator anim;
-
     public int health;
-
     public GameObject deathEffect;
 
     // Start is called before the first frame update
@@ -27,23 +23,16 @@ public class Boss : MonoBehaviour
         anim.SetInteger("boss", 1);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, Speed * speedM * Time.deltaTime);
+        if (playerIsAlive)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, Speed * speedM * Time.deltaTime);
 
-        if (player.transform.position.x > transform.position.x)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-        else
-        {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            if (player.transform.position.x > transform.position.x)
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            else
+                transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
 
@@ -55,10 +44,5 @@ public class Boss : MonoBehaviour
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-    }
-
-    public void ChangeHP(int newHP)
-    {
-        health = newHP;
     } 
 }

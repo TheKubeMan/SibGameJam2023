@@ -26,13 +26,6 @@ public class bossGun : MonoBehaviour
         enemy = transform.parent;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
-
     void FixedUpdate()
     {
         Vector3 difference = player.transform.position - transform.position;
@@ -45,9 +38,7 @@ public class bossGun : MonoBehaviour
             timeBtwShots = startTimeBtwShots;
         }
         else
-        {
             timeBtwShots -= Time.deltaTime;
-        }
 
         if (rotZ < -90 || rotZ > 90)
         {

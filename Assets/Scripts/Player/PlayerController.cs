@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,12 +49,7 @@ public class PlayerController : MonoBehaviour
 
         if(hp <= 0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            if (deathScreen.activeSelf == false)
-            {
-                deathScreen.SetActive(true);
-            }
+            Death();
         }
     }
     void FixedUpdate()
@@ -81,6 +77,23 @@ public class PlayerController : MonoBehaviour
         PlayerPrefs.SetInt("maxHP", maxHP);
         hpText.text = ":" + hp.ToString();
         hpText2.text = ":" + hp.ToString();
+    }
+
+    void Death()
+    {
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Camera.main.GetComponent<CameraFollows>().enabled = false;
+        deathScreen.SetActive(true);
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject i in enemies)
+            i.GetComponent<Enemy>().ClearTarget();
+        GameObject boss = GameObject.FindGameObjectWithTag("Boss");
+        if (boss != null)
+        {
+            boss.GetComponent<Boss>().playerIsAlive = false;
+            boss.transform.Find("pivot").gameObject.GetComponent<bossGun>().enabled = false;
+        }
+        Destroy(gameObject);
     }
 
     void Flip(){

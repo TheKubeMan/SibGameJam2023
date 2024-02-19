@@ -114,7 +114,8 @@ public class PowerUp : MonoBehaviour
             PlayerPrefs.SetFloat("Speed", other.gameObject.GetComponent<PlayerController>().speedM);
             PlayerPrefs.SetFloat("BulletSpeed", other.gameObject.GetComponentInChildren<PlayerGun>().speedM);
             PlayerPrefs.SetInt("BulletCount", other.gameObject.GetComponentInChildren<PlayerGun>().bulletCount);
-            PlayerPrefs.SetInt("Buff", type);
+            if (type != 0)
+                PlayerPrefs.SetInt("Buff", type);
             Destroy(gameObject);
         }
     }

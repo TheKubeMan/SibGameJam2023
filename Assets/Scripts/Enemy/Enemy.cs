@@ -10,19 +10,14 @@ public class Enemy : MonoBehaviour
     public float Speed;
     public float speedM = 1;
     private Transform player;
-
     public bool isPlayer;
     public float checkRadiusPlayer;
     public Transform radiusAttackPos;
-
     public LayerMask whatIsPlayer;
-
     private Rigidbody2D rb;
-
     private Animator anim;
-
     public GameObject deathEffect;
-
+    bool PlayerIsAlive = true;
     public int hp;
     public GameObject canvas;
 
@@ -42,40 +37,27 @@ public class Enemy : MonoBehaviour
 
         int randomNumber2 = UnityEngine.Random.Range(1, 101);
         if (randomNumber2 >= 1 && randomNumber2 < 31)
-        {
             type = 1;
-        }
         if (randomNumber2 >= 31 && randomNumber2 < 56)
-        {
             type = 2;
-        }
         if (randomNumber2 >= 56 && randomNumber2 < 76)
-        {
             type = 3;
-        }
         if (randomNumber2 >= 76 && randomNumber2 < 91)
-        {
             type = 4;
-        }
         if (randomNumber2 >= 91 && randomNumber2 < 101)
-        {
             type = 5;
-        }
         gameObject.GetComponent<EnemyBuffs>().GenerateBuff(type);
     }
 
     // Update is called once per frame
     void Update()
     {
-        isPlayer = Physics2D.OverlapCircle(radiusAttackPos.position, checkRadiusPlayer, whatIsPlayer);
-        if (isPlayer)
-        {
-            anim.SetBool("walk", true);
-        }
-        else
-        {
-            anim.SetBool("walk", false);
-        }
+        if (PlayerIsAlive)
+            isPlayer = Physics2D.OverlapCircle(radiusAttackPos.position, checkRadiusPlayer, whatIsPlayer);
+            if (isPlayer)
+                anim.SetBool("walk", true);
+            else
+                anim.SetBool("walk", false);
     }
 
     private void OnDrawGizmos()
@@ -85,20 +67,15 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isPlayer)
+        if (PlayerIsAlive)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, Speed * speedM * Time.deltaTime);
+            if (isPlayer)
+                transform.position = Vector2.MoveTowards(transform.position, player.position, Speed * speedM * Time.deltaTime);
 
-            
-        }
-
-        if (player.transform.position.x > transform.position.x)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-        else 
-        {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            if (player.transform.position.x > transform.position.x)
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            else 
+                transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
 
@@ -113,14 +90,20 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
         if(hp == 0)
-        {
             canvas.GetComponent<Counter>().left--;
-        }
     }
 
     public void ChangeHP(int newHP)
     {
         hp = newHP;
+    }
+
+    public void ClearTarget()
+    {
+        PlayerIsAlive = false;
+        whatIsPlayer = LayerMask.GetMask("Nothing");
+        player = null;
+        isPlayer = false;
     }
 
     public void EnemyDrop()
@@ -130,33 +113,21 @@ public class Enemy : MonoBehaviour
         {
             int randomNumber2 = UnityEngine.Random.Range(1, 101);
             if (randomNumber2 >= 1 && randomNumber2 < 31)
-            {
                 Instantiate(d1, transform.position, Quaternion.Euler(0, 0, 0));
-            }
             if (randomNumber2 >= 31 && randomNumber2 < 56)
-            {
                 Instantiate(d2, transform.position, Quaternion.Euler(0, 0, 0));
-            }
             if (randomNumber2 >= 56 && randomNumber2 < 76)
-            {
                 Instantiate(d3, transform.position, Quaternion.Euler(0, 0, 0));
-            }
             if (randomNumber2 >= 76 && randomNumber2 < 91)
-            {
                 Instantiate(d4, transform.position, Quaternion.Euler(0, 0, 0));
-            }
             if (randomNumber2 >= 91 && randomNumber2 < 101)
-            {
                 Instantiate(d5, transform.position, Quaternion.Euler(0, 0, 0));
-            }
         }
         else
         {
             int randomNumber3 = UnityEngine.Random.Range(1, 11);
             if(randomNumber3 == 1)
-            {
                 Instantiate(d6, transform.position, Quaternion.Euler(0, 0, 0));
-            }
         }
     }
 }
