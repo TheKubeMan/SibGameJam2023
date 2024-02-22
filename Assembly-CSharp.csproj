@@ -81,6 +81,8 @@
     <Compile Include="Assets\Scripts\Pickups\Pickups.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\SceneManagementus.cs" />
     <Compile Include="Assets\Scripts\Menu\startgame.cs" />
+    <Compile Include="Assets\Scripts\VolumeOptions.cs" />
+    <Compile Include="Assets\Scripts\SaveOptionsMusic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
