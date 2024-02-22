@@ -6,6 +6,7 @@ public class GamePause : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pause;
+    public GameObject gun;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class GamePause : MonoBehaviour
         pause.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
+        gun.GetComponent<PlayerGun>().enabled = true;
     }
 
     public void Pause()
@@ -41,5 +43,6 @@ public class GamePause : MonoBehaviour
         pause.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
+        gun.GetComponent<PlayerGun>().enabled = false;
     }
 }
