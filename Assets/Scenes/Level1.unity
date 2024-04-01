@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1001 &65558517
@@ -243,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!114 &74482120 stripped
@@ -315,6 +323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1001 &158958038
@@ -376,6 +388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1 &202085743
@@ -23061,6 +23077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1 &552662415
@@ -25516,7 +25536,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -25866,7 +25886,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -27207,16 +27227,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 10
       m_TileSpriteIndex: 10
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 16, y: 38, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -31032,16 +31042,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 26, y: 45, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 13
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 27, y: 45, z: 0}
     second:
       serializedVersion: 2
@@ -31907,16 +31907,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 10
       m_TileSpriteIndex: 10
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 10, y: 47, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -36152,16 +36142,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 2, y: 56, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 13
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 3, y: 56, z: 0}
     second:
       serializedVersion: 2
@@ -36677,16 +36657,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 10
       m_TileSpriteIndex: 10
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 10, y: 57, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -40606,7 +40576,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -42310,23 +42280,23 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d01e2c837a99f1243913e83268d3e53f, type: 2}
   - m_RefCount: 32
     m_Data: {fileID: 11400000, guid: 663648db36453ac49bb33a0d8a5e42ea, type: 2}
-  - m_RefCount: 5
-    m_Data: {fileID: 11400000, guid: 60911f5b995dd4b4fb3c6aedcb944fb8, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 27
     m_Data: {fileID: -4448584502526302110, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
   - m_RefCount: 22
     m_Data: {fileID: -802390499232993998, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 2377644995772237301, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 13
     m_Data: {fileID: 8169190043172534055, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 1891515778111200945, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
+    m_Data: {fileID: 2377644995772237301, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
   - m_RefCount: 34
     m_Data: {fileID: 5383552128754893099, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -7967360298344980694, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
+    m_Data: {fileID: 1891515778111200945, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
   - m_RefCount: 24
     m_Data: {fileID: -6926390283302118528, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
   - m_RefCount: 21
@@ -42339,10 +42309,10 @@ Tilemap:
     m_Data: {fileID: 3418316912255207599, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
   - m_RefCount: 32
     m_Data: {fileID: -6078517226647815805, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
-  - m_RefCount: 5
-    m_Data: {fileID: -5882981786065272649, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -7967360298344980694, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1913
+  - m_RefCount: 1908
     m_Data:
       e00: 1
       e01: 0
@@ -42361,7 +42331,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1913
+  - m_RefCount: 1908
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -42397,9 +42367,8 @@ GameObject:
   m_Component:
   - component: {fileID: 652001731}
   - component: {fileID: 652001730}
-  - component: {fileID: 652001732}
   m_Layer: 0
-  m_Name: Audio
+  m_Name: BGM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42414,8 +42383,8 @@ AudioSource:
   m_GameObject: {fileID: 652001729}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ac4f4f40d4339c6479ad795d4ab46acc, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: d210746567dd1714f9288526b134c0ab, type: 2}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -42515,19 +42484,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &652001732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652001729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4833ca61885a7cf4185c79046e1ad515, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Musicslider: {fileID: 1057102749}
 --- !u!1 &709625641
 GameObject:
   m_ObjectHideFlags: 0
@@ -42686,6 +42642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1001 &772428685
@@ -42747,6 +42707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1001 &773443686
@@ -42808,6 +42772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1 &778437071 stripped
@@ -42874,6 +42842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1001 &789123002
@@ -42935,6 +42907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1001 &839267508
@@ -42996,19 +42972,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
---- !u!114 &1057102749 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3169492051134323392, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
-  m_PrefabInstance: {fileID: 2599298701138752163}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1159388576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43068,6 +43037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1 &1183182721
@@ -48464,6 +48437,198 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2599298702411372850, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
   m_PrefabInstance: {fileID: 2599298701138752163}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1307421226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1307421227}
+  - component: {fileID: 1307421229}
+  - component: {fileID: 1307421228}
+  m_Layer: 0
+  m_Name: Pillars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1307421227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307421226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1443761062}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!483693784 &1307421228
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307421226}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &1307421229
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307421226}
+  m_Enabled: 1
+  m_Tiles:
+  - first: {x: 16, y: 38, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 26, y: 45, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 10, y: 47, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 2, y: 56, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 10, y: 57, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 5
+    m_Data: {fileID: 11400000, guid: 60911f5b995dd4b4fb3c6aedcb944fb8, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 5
+    m_Data: {fileID: -5882981786065272649, guid: 4eb2beb92ef24bc4cbda8af714869fa9, type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 5
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_TileColorArray:
+  - m_RefCount: 5
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 27, y: 58, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1443761060
 GameObject:
   m_ObjectHideFlags: 0
@@ -48507,6 +48672,7 @@ Transform:
   - {fileID: 1183182722}
   - {fileID: 552662416}
   - {fileID: 202085744}
+  - {fileID: 1307421227}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48569,6 +48735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1 &1659790787
@@ -48704,6 +48874,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4676185977497022444, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
+    - target: {fileID: 8959563509142991660, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fa7514176cd15c449aaa2c93fb8a14d, type: 3}
 --- !u!1 &1742920054 stripped
@@ -48770,6 +48948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!4 &1968419314 stripped
@@ -48836,6 +49018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy(Final) (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349286479956266589, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 858f28329ef509e44abf29b69e38735d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b4e97b7ea802c46817fc4a40a60192, type: 3}
 --- !u!1001 &2599298701138752163
@@ -48972,7 +49158,7 @@ PrefabInstance:
     - target: {fileID: 3169492051134323392, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 652001732}
+      objectReference: {fileID: 0}
     - target: {fileID: 3169492051134323392, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

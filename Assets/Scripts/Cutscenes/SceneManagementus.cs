@@ -33,6 +33,7 @@ public class SceneManagementus : MonoBehaviour
         PlayerPrefs.SetFloat("BulletSpeed", 1);
         PlayerPrefs.SetInt("BulletCount", 1);
         PlayerPrefs.SetInt("Buff", 0);
+        PlayerPrefs.SetInt("maxHP", 5);
         SceneManager.LoadScene("Level1");
     }
     public void LoadLvl2()
