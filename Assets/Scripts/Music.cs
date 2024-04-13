@@ -2,46 +2,68 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using UnityEngine.UIElements.Experimental;
 
 public class Music : MonoBehaviour
 {
     public AudioSource dialogueSource;
+    public AudioMixer MusicMixer;
     public AudioSource fightSource;
     // Start is called before the first frame update
     
     void Start()
     {
+        float value;
+        MusicMixer.GetFloat("Music", out value);
+        value += 80;
+        value /= 80;
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
         if (objs.Length > 1)
             Destroy(this.gameObject);
         DontDestroyOnLoad(this.gameObject);
 
-        StopAllCoroutines();
-        if(SceneManager.GetActiveScene().name == "Cutscene0" || SceneManager.GetActiveScene().name == "Cutscene1" || SceneManager.GetActiveScene().name == "Cutscene2" || SceneManager.GetActiveScene().name == "Cutscene3" || SceneManager.GetActiveScene().name == "Cutscene4")
-            StartCoroutine("dialogue");
-        else if (SceneManager.GetActiveScene().name == "MainMenu")
+        if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            dialogueSource.volume = 1;
+            dialogueSource.volume = value;
             fightSource.volume = 0;
         }
-        else
-            StartCoroutine("fight");
+    }
+    public void Level()
+    {
+        StopAllCoroutines();
+        StartCoroutine("fight");
+    }
+    public void Cutscene()
+    {
+        StopAllCoroutines();
+        StartCoroutine("dialogue");
     }
 
     IEnumerator dialogue()
     {
-        if (dialogueSource.volume < 1)
-            dialogueSource.volume += 0.05f;
+        float value;
+        MusicMixer.GetFloat("Music", out value);
+        value += 80;
+        value /= 80;
+        if (dialogueSource.volume < value)
+            dialogueSource.volume += 0.07f;
         if (fightSource.volume > 0)
-            fightSource.volume -= 0.05f;
+            fightSource.volume -= 0.07f;
         yield return new WaitForSeconds(0.1f);
+        StartCoroutine("dialogue");
     }
     IEnumerator fight()
     {
+        float value;
+        MusicMixer.GetFloat("Music", out value);
+        value += 80;
+        value /= 80;
         if (dialogueSource.volume > 0)
-            dialogueSource.volume -= 0.05f;
-        if (fightSource.volume < 1)
-            fightSource.volume += 0.05f;
+            dialogueSource.volume -= 0.07f;
+        if (fightSource.volume < value)
+            fightSource.volume += 0.07f;
         yield return new WaitForSeconds(0.1f);
+        StartCoroutine("fight");
     }
 }

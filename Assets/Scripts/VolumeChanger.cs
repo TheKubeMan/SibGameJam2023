@@ -8,8 +8,8 @@ public class VolumeChanger : MonoBehaviour
 {
     public AudioMixer MusicMixer; 
 	public AudioMixer SFXMixer; 
-	public Text MusicValue;
-	public Text SFXValue;
+	public Text MusicValue, MusicValue1;
+	public Text SFXValue, SFXValue1;
 	float MusicFloat;
 	float SFXFloat;
 	float MusicVol;
@@ -23,12 +23,14 @@ public class VolumeChanger : MonoBehaviour
 		MusicSlider.value = MusicVol;
 		MusicFloat = MusicVol;
 		MusicValue.text = MusicFloat.ToString();
+		MusicValue1.text = MusicFloat.ToString();
 
 		SFXVol = PlayerPrefs.GetFloat("SFXVolume");
 		SFXMixer.SetFloat("SFX", SFXVol * 0.8f - 80);
 		SFXSlider.value = SFXVol;
 		SFXFloat = SFXVol;
 		SFXValue.text = SFXFloat.ToString();
+		SFXValue1.text = SFXFloat.ToString();
 	}
 
 	public void MusicVolumeChange(float MusicVolume){
@@ -36,6 +38,7 @@ public class VolumeChanger : MonoBehaviour
 		MusicMixer.SetFloat("Music", MusicVolume * 0.8f - 80);
 		MusicFloat = MusicVolume;
 		MusicValue.text = MusicFloat.ToString();
+		MusicValue1.text = MusicFloat.ToString();
 	}
 
 	public void SFXVolumeChange(float SFXVolume){
@@ -43,5 +46,6 @@ public class VolumeChanger : MonoBehaviour
 		SFXMixer.SetFloat("SFX", SFXVolume * 0.8f - 80);
 		SFXFloat = SFXVolume;
 		SFXValue.text = SFXFloat.ToString();
+		SFXValue1.text = SFXFloat.ToString();
 	}
 }

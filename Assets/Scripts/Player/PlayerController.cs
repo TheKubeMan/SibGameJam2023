@@ -48,9 +48,7 @@ public class PlayerController : MonoBehaviour
 		}
 
         if(hp <= 0)
-        {
             Death();
-        }
     }
     void FixedUpdate()
     {
