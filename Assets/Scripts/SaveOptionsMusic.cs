@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SaveOptionsMusic : MonoBehaviour
 {
-    [SerializeField] private Slider Musicslider;
-    [SerializeField] private Slider SFXslider;
-    [SerializeField] private AudioMixer myMixer;
+    private AudioSource audioSrc;
+    private float musicVolume = 0.5f;
+    public Slider Musicslider;
 
     // Start is called before the first frame update
     void Start()
     {
-        SetMusicVolume();
+        audioSrc = GetComponent<AudioSource>();
 
         if (PlayerPrefs.HasKey("musicVolume"))
         {
@@ -22,35 +21,25 @@ public class SaveOptionsMusic : MonoBehaviour
         else
         {
             SetMusicVolume();
-            SetSFXVolume();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        audioSrc.volume = musicVolume;
     }
 
     public void LoadVolume()
     {
         Musicslider.value = PlayerPrefs.GetFloat("musicVolume");
-        SFXslider.value = PlayerPrefs.GetFloat("SFXVolume");
+
         SetMusicVolume();
-        SetSFXVolume();
     }
 
     public void SetMusicVolume()
     {
-        float musicVolume = Musicslider.value;
-        myMixer.SetFloat("music", Mathf.Log10(musicVolume)*20);
+        musicVolume = Musicslider.value;
         PlayerPrefs.SetFloat("musicVolume", musicVolume);
-    }
-
-    public void SetSFXVolume()
-    {
-        float musicVolume = SFXslider.value;
-        myMixer.SetFloat("SFX", Mathf.Log10(musicVolume) * 20);
-        PlayerPrefs.SetFloat("SFXVolume", musicVolume);
     }
 }
