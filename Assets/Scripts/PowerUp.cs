@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PowerUp : MonoBehaviour
 {
     public int type, group;
+    public AudioClip pickup;
     void Start()
     {
         switch (SceneManager.GetActiveScene().name)
@@ -116,6 +117,7 @@ public class PowerUp : MonoBehaviour
             PlayerPrefs.SetInt("BulletCount", other.gameObject.GetComponentInChildren<PlayerGun>().bulletCount);
             if (type != 0)
                 PlayerPrefs.SetInt("Buff", type);
+            other.gameObject.GetComponent<AudioSource>().PlayOneShot(pickup);
             Destroy(gameObject);
         }
     }

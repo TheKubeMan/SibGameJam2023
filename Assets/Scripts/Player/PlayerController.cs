@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 		sr = this.gameObject.GetComponent<SpriteRenderer>();
 		a = this.gameObject.GetComponent<Animator>();
         AS = gameObject.GetComponent<AudioSource>();
-        maxHP = PlayerPrefs.GetInt("maxHP", 3);
+        maxHP = PlayerPrefs.GetInt("maxHP", 5);
         hp = maxHP;
         hpText.text = ":" + hp.ToString();
         hpText2.text = ":" + hp.ToString();
@@ -48,9 +48,7 @@ public class PlayerController : MonoBehaviour
 		}
 
         if(hp <= 0)
-        {
             Death();
-        }
     }
     void FixedUpdate()
     {
