@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UIElements;
 
 public class Enemy : MonoBehaviour
@@ -21,6 +22,8 @@ public class Enemy : MonoBehaviour
     public int hp;
     public GameObject canvas;
 
+    NavMeshAgent agent;
+
     public GameObject d1, d2, d3, d4, d5, d6;
     GameObject drop;
     AudioSource s;
@@ -34,6 +37,10 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
 
         int randomNumber2 = UnityEngine.Random.Range(1, 101);
         if (randomNumber2 >= 1 && randomNumber2 < 31)
@@ -54,10 +61,10 @@ public class Enemy : MonoBehaviour
     {
         if (PlayerIsAlive)
             isPlayer = Physics2D.OverlapCircle(radiusAttackPos.position, checkRadiusPlayer, whatIsPlayer);
-            if (isPlayer)
-                anim.SetBool("walk", true);
-            else
-                anim.SetBool("walk", false);
+        if (isPlayer)
+            anim.SetBool("walk", true);
+        else
+            anim.SetBool("walk", false);
     }
 
     private void OnDrawGizmos()
@@ -70,11 +77,12 @@ public class Enemy : MonoBehaviour
         if (PlayerIsAlive)
         {
             if (isPlayer)
-                transform.position = Vector2.MoveTowards(transform.position, player.position, Speed * speedM * Time.deltaTime);
+                //transform.position = Vector2.MoveTowards(transform.position, player.position, Speed * speedM * Time.deltaTime);
+                agent.SetDestination(player.position);
 
             if (player.transform.position.x > transform.position.x)
                 transform.eulerAngles = new Vector3(0, 0, 0);
-            else 
+            else
                 transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
@@ -89,7 +97,7 @@ public class Enemy : MonoBehaviour
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        if(hp == 0)
+        if (hp == 0)
             canvas.GetComponent<Counter>().left--;
     }
 
@@ -109,7 +117,7 @@ public class Enemy : MonoBehaviour
     public void EnemyDrop()
     {
         int randomNumber = UnityEngine.Random.Range(1, 4);
-        if(randomNumber == 1)
+        if (randomNumber == 1)
         {
             int randomNumber2 = UnityEngine.Random.Range(1, 101);
             if (randomNumber2 >= 1 && randomNumber2 < 31)
@@ -126,7 +134,7 @@ public class Enemy : MonoBehaviour
         else
         {
             int randomNumber3 = UnityEngine.Random.Range(1, 11);
-            if(randomNumber3 == 1)
+            if (randomNumber3 == 1)
                 Instantiate(d6, transform.position, Quaternion.Euler(0, 0, 0));
         }
     }
