@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 3073429}
   - component: {fileID: 3073428}
   - component: {fileID: 3073427}
+  - component: {fileID: 3073432}
   m_Layer: 0
   m_Name: Tilemap2
   m_TagString: Untagged
@@ -18195,6 +18196,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &3073432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &147914053 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2599298702411372850, guid: eec563e01634a624c99a5be6b5850be2, type: 3}
@@ -18885,6 +18902,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &832651028
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4992239233546785980, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_Name
+      value: NavMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785982, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992239233546785983, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 20538885f75745b4eb6302ba6a47fe61, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec85da9a528451041a330fb08deb2cf2, type: 3}
 --- !u!1 &926582386
 GameObject:
   m_ObjectHideFlags: 0
@@ -18899,6 +18977,7 @@ GameObject:
   - component: {fileID: 926582390}
   - component: {fileID: 926582389}
   - component: {fileID: 926582388}
+  - component: {fileID: 926582393}
   m_Layer: 4
   m_Name: Tilemap3
   m_TagString: Untagged
@@ -25675,6 +25754,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &926582393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926582386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &934091020
 GameObject:
   m_ObjectHideFlags: 0
@@ -26563,6 +26658,8 @@ GameObject:
   - component: {fileID: 2033855528}
   - component: {fileID: 2033855530}
   - component: {fileID: 2033855529}
+  - component: {fileID: 2033855532}
+  - component: {fileID: 2033855531}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -38202,6 +38299,36 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2033855531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033855527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709c8d6349be44c68dff3d220992400c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AffectedAgents: ffffffff
+  m_TileModifiers: []
+--- !u!114 &2033855532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033855527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2132481594
 GameObject:
   m_ObjectHideFlags: 0

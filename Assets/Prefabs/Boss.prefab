@@ -300,6 +300,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
+  playerIsAlive: 1
   health: 25
   deathEffect: {fileID: 4038319552431631435, guid: be044760c02e77c44a099f82ef29450b, type: 3}
 --- !u!1 &4268043841485153009

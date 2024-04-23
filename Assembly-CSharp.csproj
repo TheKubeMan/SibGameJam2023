@@ -58,6 +58,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerGun.cs" />
     <Compile Include="Assets\Scripts\VolumeChanger.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFollows.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets\Scripts\PowerUp.cs" />
     <Compile Include="Assets\Scripts\MusicChanger.cs" />
     <Compile Include="Assets\Scripts\SaveOptionsMusic.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBuffs.cs" />
     <Compile Include="Assets\Scripts\Enemy\Gun.cs" />
@@ -78,17 +80,15 @@
     <Compile Include="Assets\Scripts\Enemy\bossGun.cs" />
     <Compile Include="Assets\Scripts\Counter.cs" />
     <Compile Include="Assets\Scripts\Enemy\enemyGunRebalanced.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Music.cs" />
     <Compile Include="Assets\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Boss.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\Scripts\Pickups\Pickups.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\SceneManagementus.cs" />
     <Compile Include="Assets\Scripts\Menu\startgame.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -981,6 +981,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NavMeshPlusEditor.csproj">
+      <Project>{92042F4C-2D77-99FF-0A70-FA202AAE565C}</Project>
+      <Name>NavMeshPlusEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshPlus.csproj">
+      <Project>{F26B2CD0-F26D-5B3C-A065-75323E6C7BCD}</Project>
+      <Name>NavMeshPlus</Name>
+    </ProjectReference>
     <ProjectReference Include="PackageToolsEditor.csproj">
       <Project>{20574476-9A9C-4514-8C48-67F3658B7A0A}</Project>
       <Name>PackageToolsEditor</Name>
@@ -992,14 +1000,6 @@
     <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
       <Project>{613F9716-CEA9-C51E-9D6E-CDBA56E11F73}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshPlusEditor.csproj">
-      <Project>{92042F4C-2D77-99FF-0A70-FA202AAE565C}</Project>
-      <Name>NavMeshPlusEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshPlus.csproj">
-      <Project>{F26B2CD0-F26D-5B3C-A065-75323E6C7BCD}</Project>
-      <Name>NavMeshPlus</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
